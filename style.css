@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(186, 224, 220);
+}
+
+header{
+    background-color: aliceblue;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bounce {
+            font:50px Papyrus;
+            animation: bounce 1s ease-in-out infinite alternate; /* Slower, bouncing effect */
+            display: inline-block;
+            
+        }
+
+        @keyframes bounce {
+            0% { transform: translateY(0); }  /* Starting position */
+            100% { transform: translateY(-8px); } /* Move upwards */
+        }
+
+h1{
+    font: 35px Papyrus;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
