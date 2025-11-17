@@ -1,27 +1,114 @@
-body{
-    background-color: rgb(186, 224, 220);
-}
+body {
+            background-color: rgb(186, 224, 220);
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
 
-header{
-    background-color: aliceblue;
-    text-align: center;
-    margin-bottom: 20px;
-}
+        header {
+            background-color: rgb(211, 227, 240);
+            text-align: center;
+            padding: 0.5em 0; /* Reduced padding for a smaller header */
+            margin-bottom: 0;
+        }
 
-.bounce {
-            font:50px Papyrus;
-            animation: bounce 1s ease-in-out infinite alternate; /* Slower, bouncing effect */
+        .bounce {
+            font: 30px Papyrus; /* Reduced font size */
+            animation: bounce 1s ease-in-out infinite alternate;
             display: inline-block;
-            
         }
 
         @keyframes bounce {
-            0% { transform: translateY(0); }  /* Starting position */
-            100% { transform: translateY(-8px); } /* Move upwards */
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-5px); } /* Reduced bounce height */
         }
 
-h1{
-    font: 35px Papyrus;
-    margin-top: 7px;
-    margin-bottom: 7px;
-}
+        h1 {
+            font: 25px Papyrus; /* Reduced font size */
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 0.5em 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 0.5em;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+
+        main {
+            padding: 20px;
+            min-height: 600px;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+.about-me-section {
+            display: flex;
+            align-items: left;
+            justify-content: space-between;
+        }
+
+        .about-me-text {
+            flex: 1;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .image-stack img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            position: absolute; /* Stack the images */
+        }
+
+        .image-stack img:first-child {
+            top: 0;
+            left: 0;
+            z-index: 2; /* Ensure the first image is on top */
+        }
+
+        .image-stack img:last-child {
+            top: 20px; /* Offset the second image */
+            left: 20px; /* Offset the second image */
+            z-index: 1;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 600px) {
+            .about-me-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .about-me-text, .image-stack {
+                width: 100%;
+                padding: 10px;
+                text-align: center; /* Center align text on small screens */
+            }
+
+            .image-stack {
+                max-width: 100%; /* Allow images to take full width on small screens */
+            }
+
+            .image-stack img {
+                position: static; /* Remove absolute positioning */
+                margin: 5px 0; /* Add some margin */
+            }
+        }
