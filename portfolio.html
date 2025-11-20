@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style2.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>HeManChing</title>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="home-button">Home</a>
+        <h1>My Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#animation">Animation</a> |
+        <a href="#painting">Painting</a> |
+        <a href="#music">Composing Music</a>
+    </nav>
+
+    <main>
+        <section id="animation">
+            <h2>Animation</h2>
+            <p>Here are some of my animation projects.</p>
+            <!-- Add your animation content here (e.g., videos, descriptions) -->
+            <video width="640" height="360" controls>
+                <source src="showreel.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section id="painting">
+            <h2>Painting</h2>
+            <p>Here are some of my painting projects.</p>
+
+            <div class="painting-grid">
+                <div class="painting-item">
+                    <img src="paint_1.jpg" alt="Painting 1">
+                    <h3>Man and Nature</h3>
+                    <p class="painting-description">2023, Acrylic oil painting, 420mm*594mm</p>
+                </div>
+
+                <div class="painting-item">
+                    <img src="paint_2.jpg" alt="Painting 2">
+                    <h3>Girl</h3>
+                    <p class="painting-description">2023, Digital painting</p>
+                </div>
+
+                <div class="painting-item">
+                    <img src="paint_3.jpg" alt="Painting 3">
+                    <h3>My Cat</h3>
+                    <p class="painting-description">2024, Ballpoint pens and markers, 210mm*297mm</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="music">
+            <h2>Composing Music</h2>
+            <p>Here are some of my musical compositions.</p>
+            <!-- Add your music content here (e.g., audio players, descriptions) -->
+            <audio controls>
+                <source src="assignmet.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+            <audio controls>
+                <source src="final project.wav" type="audio/wav">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+    </main>

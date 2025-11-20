@@ -1,0 +1,103 @@
+html{
+    scroll-behavior:smooth;
+}
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(186, 224, 220);
+            color: #333;
+        }
+
+        header {
+            background-color:rgb(211, 227, 240);
+            color: #333;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .home-button {
+            position: absolute; /* Position it absolutely within the header */
+            top: 40px;          /* Adjust the distance from the top */
+            left: 80px;         /* Adjust the distance from the left */
+            background-color: rgb(142, 180, 211);
+            color: #333;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .home-button:hover {
+            background-color: rgb(86, 148, 142)
+        }
+
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 0.5em 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color:rgb(86, 148, 142)
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+
+        /* Painting Section Styles */
+        .painting-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 20px;
+        }
+
+        .painting-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .painting-item img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Remove extra space below image */
+            margin-bottom: 10px;
+        }
+
+        .painting-description {
+            margin-top: 10px;
+        }
+
+        /* General Image Styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Center images */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 600px) {
+            .painting-grid {
+                grid-template-columns: 1fr; /* Stack items on small screens */
+            }
+        }

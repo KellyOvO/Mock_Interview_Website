@@ -1,3 +1,6 @@
+html{
+    scroll-behavior:smooth;
+}
 body {
             background-color: rgb(186, 224, 220);
             margin: 0;
@@ -8,23 +11,23 @@ body {
         header {
             background-color: rgb(211, 227, 240);
             text-align: center;
-            padding: 0.5em 0; /* Reduced padding for a smaller header */
+            padding: 0.5em 0;
             margin-bottom: 0;
         }
 
         .bounce {
-            font: 30px Papyrus; /* Reduced font size */
+            font: 40px Papyrus;
             animation: bounce 1s ease-in-out infinite alternate;
             display: inline-block;
         }
 
         @keyframes bounce {
             0% { transform: translateY(0); }
-            100% { transform: translateY(-5px); } /* Reduced bounce height */
+            100% { transform: translateY(-7px); }
         }
 
         h1 {
-            font: 25px Papyrus; /* Reduced font size */
+            font: 25px Papyrus;
         }
 
         nav {
@@ -42,7 +45,7 @@ body {
         }
 
         nav a:hover {
-            background-color: #4CAF50;
+            background-color: rgb(86, 148, 142)
         }
 
         main {
@@ -51,23 +54,49 @@ body {
         }
 
         .container {
-            max-width: 960px;
+            max-width: 1200px;
+            height: 600px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-.about-me-section {
+        .about-me-section {
             display: flex;
-            align-items: left;
+            align-items: flex-start; /* Align items to the top */
             justify-content: space-between;
         }
 
         .about-me-text {
             flex: 1;
             padding: 20px;
+            padding-right: 120px;
             text-align: left;
+        }
+
+        .greeting-section {
+            display: flex;
+            align-items: center; /* Vertically align the greeting and icon */
+            margin-bottom: 15px; /* Add some space below the greeting */
+        }
+
+        .greeting-section h3 {
+            margin-right: 15px; /* Space between greeting and icon */
+        }
+
+        #img3 {
+            clip-path: circle(50%); /* Make the icon a circle */
+            width: 120px; /* Adjust size as needed */
+            height: 120px; /* Adjust size as needed */
+            object-fit: cover; /* Maintain aspect ratio and cover the circle */
+        }
+
+        .image-stack {
+            flex: 1;
+            position: relative;
+            width: 370px; /* Set a fixed width for the image stack */
+            height: 521px; /* Set a fixed height for the image stack */
         }
 
         .image-stack img {
@@ -75,19 +104,47 @@ body {
             height: auto;
             border: 1px solid #ddd;
             border-radius: 4px;
-            position: absolute; /* Stack the images */
+            position: absolute;
         }
 
         .image-stack img:first-child {
-            top: 0;
+            top: auto; /* Reset top */
+            bottom: 0;  /* Align to the bottom */
             left: 0;
-            z-index: 2; /* Ensure the first image is on top */
+            z-index: 2;
+            transform: translateY(0); /* Remove translateY */
+            width: 70%; /* Cover the left half */
+            height: auto; /* Maintain aspect ratio */
         }
 
         .image-stack img:last-child {
-            top: 20px; /* Offset the second image */
-            left: 20px; /* Offset the second image */
+            top: 0; /* Position the second image at the top */
+            left: 30%; /* Offset the second image to the right */
             z-index: 1;
+        }
+
+        .portfolio-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            z-index: 3; /* Ensure it's above the images */
+        }
+
+        .portfolio-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .about-me {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
 
         /* Responsive design for smaller screens */
@@ -100,15 +157,100 @@ body {
             .about-me-text, .image-stack {
                 width: 100%;
                 padding: 10px;
-                text-align: center; /* Center align text on small screens */
+                text-align: center;
             }
 
             .image-stack {
-                max-width: 100%; /* Allow images to take full width on small screens */
+                max-width: 100%;
+                height: auto; /* Remove fixed height for responsiveness */
             }
 
             .image-stack img {
-                position: static; /* Remove absolute positioning */
-                margin: 5px 0; /* Add some margin */
+                position: static;
+                margin: 5px 0;
             }
         }
+
+        h2 {
+            font-size: 30px; /* Corrected syntax and adjusted size */
+        }
+
+        h3 {
+            font-size: 20px; /* Corrected syntax and adjusted size */
+        }
+.intro_button {
+    display: inline-block;
+    text-decoration: none;
+    color:gold;
+    background-color: rgb(82, 148, 142);
+    padding: .75em 1em;
+    margin-top: 0em;
+    border-radius: .5em;
+    font-weight:600;
+}
+
+.container2 {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+.axis {
+            stroke: #ccc;
+            stroke-width: 1px;
+        }
+
+        .gridCircle {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 0.5px;
+        }
+
+        .radarStroke {
+            fill: rgba(107, 76, 154, 0.2); /* Semi-transparent fill */
+            stroke: #6b4c9a;
+            stroke-width: 2px;
+        }
+
+        .radarDot {
+            fill: #6b4c9a;
+        }
+
+        .axisLabel {
+            font-size: 18px;
+        }
+
+      .node circle {
+            fill: #fff;
+            stroke: steelblue;
+            stroke-width: 1.5px;
+        }
+
+        .node text {
+            font: 18px;
+        }
+
+        .link {
+            fill: none;
+            stroke: white; /* Set the line color to purple */
+            stroke-width: 0.5px;
+        }
+
+.node circle {
+            fill: #fff;
+            stroke: steelblue;
+            stroke-width: 3px;
+        }
+
+        .node text {
+            font: 12px sans-serif;
+        }
+
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 2px;
+        }
+
