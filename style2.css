@@ -95,6 +95,7 @@ body {
             margin: 0 auto; /* Center images */
         }
 
+
         /* Responsive adjustments for smaller screens */
         @media (max-width: 600px) {
             .painting-grid {
