@@ -253,4 +253,29 @@ body {
             stroke: #ccc;
             stroke-width: 2px;
         }
+.resume-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
 
+        .resume-section h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .resume-item {
+            margin-bottom: 15px;
+        }
+
+        .resume-item h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .resume-item p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
